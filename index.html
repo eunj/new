@@ -30,7 +30,10 @@ function create() {
 
 function preload() {
 
-    game.load.audio('boden', ['do.mp3']);
+    game.load.image('disk', 'assets/sprites/ra_dont_crack_under_pressure.png');
+
+    //  Firefox doesn't support mp3 files, so use ogg
+    game.load.audio('boden', ['assets/audio/bodenstaendig_2000_in_rock_4bit.mp3', 'assets/audio/bodenstaendig_2000_in_rock_4bit.ogg']);
 
 }
 
@@ -45,7 +48,6 @@ function create() {
     music = game.add.audio('boden');
 
     music.play();
-    
 
     s = game.add.sprite(game.world.centerX, game.world.centerY, 'disk');
     s.anchor.setTo(0.5, 0.5);
